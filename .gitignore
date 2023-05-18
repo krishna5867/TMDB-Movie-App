@@ -8,9 +8,13 @@
 # testing
 /coverage
 
+# environment files
+.env
+env.js
+
 # production
 /build
-/env
+
 # misc
 .DS_Store
 .env.local
