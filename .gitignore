@@ -9,8 +9,8 @@
 /coverage
 
 # environment files
-/src/.env
-/src/env.js
+.env
+env.js
 
 # production
 /build
