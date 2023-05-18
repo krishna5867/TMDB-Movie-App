@@ -19,9 +19,9 @@ const CardDetails = () => {
   return (
     <>
       {/* Banner */}
-      <div className='w-[100vw] sm:h-[130vh] bg-black pb-10'>
+      <div className='w-[100vw] sm:h-[180vh] bg-black '>
         <div className="w-[100%] sm:position:relative z-0">
-          <img className="w-[90%] h-[400px] mx-auto" src={`https://image.tmdb.org/t/p/original${data ? data.backdrop_path : ""}`} alt="" />
+          <img className="w-[50%] h-[400px] mx-auto"  src={`https://image.tmdb.org/t/p/original${data ? data.backdrop_path : ""}`} alt="" />
         </div>
         {/* Details */}
         <div className="sm:mx-[120px] text sm:flex sm:justify-between">
@@ -54,10 +54,10 @@ const CardDetails = () => {
           </div>
         </div>
 
-        <div className='text-start sm:w-[800px] mt-[10px] sm:mx-[400px] mx-[20px]'>
-          <div className='text-white text-start'>
-              <h1 className="text-3xl font-bold">Synopsis</h1>
-              {data ? data.overview : ""}
+        <div className='sm:mx-[400px] mx-0 mt-12'>
+          <div className='text-white text-start sm:mx-0 mx-24'>
+              <h1 className="sm:text-4xl text-3xl font-bold mb-4">Synopsis</h1>
+              <h1 className='sm:text-2xl text-xl p-4 sm:w-[200px] md:w-[300px] lg:w-[600px] xl:w-[900px]' >{data ? data.overview : ""}</h1>
             </div>
         </div>
 
