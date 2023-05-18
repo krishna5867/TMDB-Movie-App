@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Header = () => {
-    const navigate = useNavigate();
-    const [search, setSearch] = useState([])
+    const navigate = useNavigate([]);
+    const [search, setSearch] = useState("")
 
     const handleSearch = (e) => {
         const searchValue = e.target.value;
         if (searchValue !== "") {
-            setSearch(searchValue);
-            navigate(`/search/q=${searchValue}`);
+            setSearch(...search,searchValue);
+            navigate(`/search/query=${searchValue}`);
         } else {
             navigate("/");
         }
