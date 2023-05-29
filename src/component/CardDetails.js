@@ -21,7 +21,7 @@ const CardDetails = () => {
       {/* Banner */}
       <div className='w-[100vw] sm:h-[180vh] bg-black '>
         <div className="w-[100%] sm:position:relative z-0">
-          <img className="w-[50%] h-[400px] mx-auto"  src={`https://image.tmdb.org/t/p/original${data ? data.backdrop_path : ""}`} alt="" />
+          <img className="w-[100%] h-[400px] mx-auto sm:px-14 px-6"  src={`https://image.tmdb.org/t/p/original${data ? data.backdrop_path : ""}`} alt="" />
         </div>
         {/* Details */}
         <div className="sm:mx-[120px] text sm:flex sm:justify-between">
@@ -29,7 +29,7 @@ const CardDetails = () => {
             <img className='z-40 rounded-lg'
               src={`https://image.tmdb.org/t/p/original${data ? data.poster_path : ""}`} alt="img" />
           </div>
-          <div className="w-[60%] h-[px] sm:position:absolute sm:mt-[-150px] mt-[100px] sm:mx-0 mx-[100px]">
+          <div className="w-[60%] sm:position:absolute sm:mt-[-180px] mt-[100px] sm:mx-0 mx-[100px]">
             <h2 className='text-white font-bold sm:text-5xl text-3xl text-center'>
               {data ? data.original_title : ""} </h2>
             <h1 className="text-white font-semi-bold sm:text-xl">{data ? data.tagline : ""}</h1>
@@ -45,7 +45,7 @@ const CardDetails = () => {
                 data && data.genres
                   ?
                   data.genres.map(e => (
-                      <div className="sm:px-2 p-0 sm:mx-2 border-2 border-white rounded-full px-3" id={e.id}>{e.name}</div>
+                      <div className="sm:px-2 p-0 sm:mx-2 border-2 border-white rounded-full px-3 hover:bg-black cursor-pointer hover:border-black" id={e.id}>{e.name}</div>
                   ))
                   :
                   ""
@@ -57,7 +57,7 @@ const CardDetails = () => {
         <div className='sm:mx-[400px] mx-0 mt-12'>
           <div className='text-white text-start sm:mx-0 mx-24'>
               <h1 className="sm:text-4xl text-3xl font-bold mb-4">Synopsis</h1>
-              <h1 className='sm:text-2xl text-xl p-4 sm:w-[200px] md:w-[300px] lg:w-[600px] xl:w-[900px]' >{data ? data.overview : ""}</h1>
+              <h1 className='sm:text-2xl text-xl p-4 sm:w-[200px] md:w-[300px] lg:w-[600px] xl:w-[850px]' >{data ? data.overview : ""}</h1>
             </div>
         </div>
 
